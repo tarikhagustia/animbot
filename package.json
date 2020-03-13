@@ -4,7 +4,8 @@
   "description": "super amazing cool anime bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "author": "Tarikh Agustia Ijudin",
   "license": "ISC",
