@@ -34,13 +34,6 @@ app.post('/', (req, res) => {
                 reply += `Score: ${item.score}\n`
                 reply += `Members: ${item.members}\n`
                 reply += `-----------------------------------\n`
-            }).catch(error => {
-
-                // Send error response
-                res.send({
-                    type: 'chat',
-                    body: "Error when fetching from API"
-                })
             })
 
             // Fire response to JSON
@@ -49,6 +42,13 @@ app.post('/', (req, res) => {
                 body: reply
             })
 
+        }).catch(error => {
+
+            // Send error response
+            res.send({
+                type: 'chat',
+                body: "Error when fetching from API"
+            })
         })
     }else{
         // if not using !anime, return empty json
