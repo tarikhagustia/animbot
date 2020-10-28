@@ -54,11 +54,7 @@ app.post('/', (req, res) => {
     }
     else if(msg.startsWith('Invoice Confirmation')) {
         const invoice = msg.split(' ')[2]
-        reply = `*JAWAB OTOMATIS*\n
-        Hi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice ${invoice}. Kami akan memperosesnya segera!\n
-        \n
-        Terimakasih :)
-        `
+        reply = `*JAWAB OTOMATIS*\nHi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice *${invoice}*. Kami akan memperosesnya segera!\n\n`
         // 
         res.send({
             type: 'chat',
