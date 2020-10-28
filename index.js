@@ -39,7 +39,8 @@ app.post('/', (req, res) => {
             // Fire response to JSON
             res.send({
                 type: 'chat',
-                body: reply
+                body: reply,
+                simulation: true
             })
 
         }).catch(error => {
