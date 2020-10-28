@@ -62,7 +62,8 @@ app.post('/', (req, res) => {
         // 
         res.send({
             type: 'chat',
-            body: reply
+            body: reply,
+            simulation: true
         })
     }else{
         // if not using !anime, return empty json
