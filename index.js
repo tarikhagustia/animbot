@@ -54,8 +54,17 @@ app.post('/', (req, res) => {
     }
     else if(msg.startsWith('Invoice Confirmation')) {
         const invoice = msg.split(' ')[2]
-        reply = `*JAWAB OTOMATIS*\nHi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice *${invoice}*. Kami akan memperosesnya segera!\n\n`
+        reply = `*JAWAB OTOMATIS*\nHi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice *${invoice}*. Kami akan memperosesnya segera dalam 10 menit.!\nPastikan anda melakukan pembayaran sesuai nominal pada invoice :)`
         // 
+        res.send({
+            type: 'chat',
+            body: reply,
+            simulation: true
+        })
+    }else if(msg.startsWith('help')) {
+        let reply = ""
+        reply += `Hi, Selamat datang dilayanan chatbot, kami menyediakan layanan bot diantaranya:\n`
+        reply += `- !anime nama anime : Untuk mencari list anime dan ratingnya\n`
         res.send({
             type: 'chat',
             body: reply,
