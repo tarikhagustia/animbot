@@ -74,7 +74,7 @@ app.post('/', (req, res) => {
         // if not using !anime, return empty json
         let reply = ""
         reply += `Hi, This is B0T Service sorry we don't understand your message, for contacting support, please text to following number:\n`
-        reply += `https://wa.me/6285159664534\n`
+        reply += `https://wa.me/6285156055377\n`
         res.send({
             type: 'chat',
             body: reply,
