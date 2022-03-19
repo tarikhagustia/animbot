@@ -54,7 +54,9 @@ app.post('/', (req, res) => {
     }
     else if(msg.startsWith('Invoice Confirmation')) {
         const invoice = msg.split(' ')[2]
-        reply = `*JAWAB OTOMATIS*\nHi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice *${invoice}*. Kami akan memperosesnya segera dalam 10 menit.!\nPastikan anda melakukan pembayaran sesuai nominal pada invoice :)`
+        reply = `*JAWAB OTOMATIS*\nHi, Terimakasih telah melakukan Konfirmasi untuk pembayaran dengan nomor invoice *${invoice}*. Kami akan memperosesnya segera dalam 10 menit.!\nPastikan anda melakukan pembayaran sesuai nominal pada invoice :)\n\nJika anda mengalami kesulitan ketika pembayaran silakan hubungi Support whatspie`;
+        
+        reply += `\n\nHi, Thank you for confirming the payment with the invoice number *${invoice}*. We will process it soon in 10 minutes.\nMake sure you make the payment according to the nominal on the invoice :)\n\nIf you have difficulty with payment, please contact whatspie support`;
         // 
         res.send({
             type: 'chat',
@@ -73,8 +75,8 @@ app.post('/', (req, res) => {
     }else{
         // if not using !anime, return empty json
         let reply = ""
-        reply += `Hi, This is B0T Service sorry we don't understand your message, for contacting support, please text to following number:\n`
-        reply += `https://wa.me/6285156055377\n`
+        reply += `Hi, This is B0T Service sorry we don't understand your message, for contacting support, please text to Whatspie support on Website at\n`
+        reply += `https://whatspie.com\n`
         res.send({
             type: 'chat',
             body: reply,
