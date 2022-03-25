@@ -78,9 +78,6 @@ app.post('/', (req, res) => {
         reply += `Hi, This is B0T Service sorry we don't understand your message, for contacting support, please text to Whatspie support on Website at\n`
         reply += `https://whatspie.com\n`
         res.send({
-            type: 'chat',
-            body: reply,
-            simulation: true
         })
     }
 
